@@ -1,16 +1,60 @@
-# React + Vite
+# Aniket Kumar Singh | Personal Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository of my personal developer portfolio! This project showcases my skills, projects, certifications, and live coding platform statistics in a fast, responsive, and visually stunning web application.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/profile.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Key Features
+- **Live LeetCode Stats:** Automatically fetches and displays my real-time LeetCode ranking, badges, and solved problem counts via API.
+- **Dynamic GitHub Stats:** Pulls live data of my repositories, total stars, forks, and followers directly from the GitHub API.
+- **Midnight Electric Theme:** A custom-built, deeply customized dark mode aesthetic featuring sleek Glassmorphism cards and vibrant glowing accents.
+- **Buttery Smooth Animations:** Utilizes Framer Motion for highly optimized scroll-reveals, bouncy badges, and hover interactions.
+- **Fully Responsive:** Carefully crafted with CSS Grid and Flexbox to look perfect on massive desktops down to small mobile screens.
 
-## React Compiler
+## 🛠️ Technology Stack
+- **Framework:** [React 18](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/) (For ultra-fast HMR and optimized production builds)
+- **Styling:** Pure Modern CSS3 (Variables, Grid, Flexbox, Glassmorphism)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/) (Feather & Simple Icons)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+If you'd like to run this portfolio locally or fork it as a template, follow these steps:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/anikket7/Portfolio.git
+   ```
+
+2. **Navigate into the directory:**
+   ```bash
+   cd Portfolio
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The application will run perfectly at `http://localhost:5173`.
+
+## 🌐 Deployment
+This portfolio is optimized for zero-config deployment. To push it live, simply run:
+```bash
+npm run build
+```
+You can then seamlessly drag the generated `dist/` folder into Netlify, or deploy it instantly using the Vercel dashboard.
+
+---
+
+<p align="center">
+  Built with ❤️ by <b>Aniket Kumar Singh</b> <br/>
+  <a href="https://linkedin.com/in/aniket712/">LinkedIn</a> •
+  <a href="https://github.com/anikket7">GitHub</a> •
+  <a href="https://leetcode.com/anikket7">LeetCode</a>
+</p>

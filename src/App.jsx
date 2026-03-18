@@ -11,12 +11,14 @@ import Certifications from './components/Certifications';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   return (
     <>
+      <Analytics />
       <StarParticles />
       <AnimatePresence mode="wait">
         {loading ? (

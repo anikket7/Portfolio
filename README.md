@@ -2,7 +2,7 @@
 
 Welcome to the repository of my personal developer portfolio! This project showcases my skills, projects, certifications, and live coding platform statistics in a fast, responsive, and visually stunning web application.
 
-![Portfolio Preview](./public/profile.png)
+![Portfolio Preview](./public/profil.png)
 
 ## 🌟 Key Features
 - **Live LeetCode Stats:** Automatically fetches and displays my real-time LeetCode ranking, badges, and solved problem counts via API.

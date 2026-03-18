@@ -1,0 +1,130 @@
+.edu__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  position: relative;
+}
+
+.edu__timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--border-subtle));
+  border-radius: 2px;
+}
+
+.edu__item {
+  display: flex;
+  gap: var(--gap-lg);
+  position: relative;
+  margin-left: 48px;
+}
+
+.edu__item--current {
+  border-color: rgba(0, 212, 170, 0.3);
+}
+
+.edu__icon-wrap {
+  position: absolute;
+  left: calc(-48px - 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.edu__content {
+  flex: 1;
+}
+
+.edu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--gap-md);
+  gap: var(--gap-md);
+}
+
+.edu__degree {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.edu__field {
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.edu__school {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.edu__badge {
+  padding: 4px 12px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 212, 170, 0.3);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.edu__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.edu__meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.edu__grade {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .edu__timeline::before {
+    left: 14px;
+  }
+
+  .edu__item {
+    margin-left: 36px;
+  }
+
+  .edu__icon-wrap {
+    left: calc(-36px - 10px);
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .edu__header {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+}

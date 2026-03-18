@@ -1,0 +1,215 @@
+.projects__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-2xl);
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Center timeline line */
+.projects__timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--border-subtle));
+  border-radius: 2px;
+}
+
+.projects__reveal {
+  width: 100%;
+}
+
+/* Project Wrapper */
+.projects__item {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.projects__item--left {
+  justify-content: flex-start;
+}
+
+.projects__item--right {
+  justify-content: flex-end;
+}
+
+/* Timeline Icon Point */
+.projects__icon-wrap {
+  position: absolute;
+  left: 50%;
+  top: 32px;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.85rem;
+  z-index: 2;
+  box-shadow: 0 0 0 6px var(--bg-primary);
+}
+
+.projects__card-wrapper {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Adjust card wrapper spacing depending on side */
+.projects__item--left .projects__card-wrapper {
+  padding-right: 48px;
+}
+
+.projects__item--right .projects__card-wrapper {
+  padding-left: 48px;
+}
+
+.project-card {
+  padding: var(--gap-xl) !important;
+  height: 100%;
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--gap-lg);
+  gap: var(--gap-md);
+}
+
+.project-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.project-card__subtitle {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.project-card__period {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding: 4px 10px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-card__desc {
+  list-style: none;
+  margin-bottom: var(--gap-lg);
+}
+
+.project-card__desc li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--gap-sm);
+}
+
+.project-card__desc li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.project-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-card__links {
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+.project-card__links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.project-card__links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+@media (max-width: 768px) {
+  .projects__timeline::before {
+    left: 24px;
+    transform: none;
+  }
+
+  .projects__item,
+  .projects__item--left,
+  .projects__item--right {
+    justify-content: flex-start;
+  }
+
+  .projects__icon-wrap {
+    left: 24px;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .projects__card-wrapper {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .projects__item--left .projects__card-wrapper,
+  .projects__item--right .projects__card-wrapper {
+    padding-left: 48px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card__header {
+    flex-direction: column;
+  }
+}

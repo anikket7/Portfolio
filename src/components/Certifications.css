@@ -1,0 +1,128 @@
+.certs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-2xl);
+}
+
+.certs__group-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--gap-lg);
+  padding-bottom: var(--gap-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.certs__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: row-reverse; /* Image on right by default since header is first in HTML, if they meant image left: row maybe better... let's use row so text is left, image right */
+  align-items: center;
+  gap: var(--gap-lg);
+  padding: var(--gap-lg) !important;
+  text-decoration: none;
+}
+
+.cert-card__header {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: flex-start;
+  flex: 1;
+}
+
+.cert-card--link {
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex !important;
+}
+
+.cert-card--link:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.cert-card__image {
+  flex: 0 0 160px; /* Fixed width for horizontal layout */
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  margin-top: 0;
+  aspect-ratio: 16 / 10;
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.cert-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.cert-card--link:hover .cert-card__image img {
+  transform: scale(1.05);
+}
+
+.cert-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.cert-card__title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cert-card__issuer {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.cert-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.cert-card__date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .certs__grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+  
+  .cert-card {
+    flex-direction: column-reverse; /* Stacks image on top of text on mobile if row-reverse, wait row-reverse means image first visual, so column means image top */
+    align-items: flex-start;
+  }
+
+  .cert-card__image {
+    flex: none;
+    width: 100%;
+    margin-bottom: var(--gap-sm);
+  }
+}
